@@ -2,32 +2,42 @@ export const profile = {
   name: "Hilal Abdilah",
   program: "Teknik Informatika",
   university: "STIMIK DCI Tasikmalaya",
-  interest: "Pemrograman, Desain Digital, dan AI",
-  about: "Mahasiswa baru angkatan 2k25. Saya percaya informatika adalah kunci untuk menciptakan solusi cerdas, inovatif, dan berdampak positif bagi masyarakat."
-};
+  tagline: "Mahasiswa baru · Pengembang Web & Desain Digital",
+  about:
+    "Saya mahasiswa baru Teknik Informatika yang antusias mempelajari pemrograman, desain digital, dan teknologi AI. Bersemangat membangun karya nyata, kolaborasi, dan terus belajar.",
+  photo: "/profile.jpg" // replace in /public if available
+}
 
 export const skills = [
-  "Dasar Pemrograman (HTML, CSS, JavaScript)",
+  "HTML, CSS, JavaScript",
+  "Vue 3 (Vite)",
+  "Responsive Web Design",
   "Desain Grafis (Canva, Figma)",
-  "UI/UX Dasar",
-  "Editing Video (CapCut)",
-
-];
+  "Editing Video Sederhana",
+  "Problem Solving & Teamwork"
+]
 
 export const achievements = [
-  "Mengikuti Pelatihan Dasar Web Development Online",
-  "Membuat aplikasi sederhana menggunakan HTML & JavaScript",
-  "Lulus dari SMK"
-];
+  "Peserta Pelatihan Dasar Pemrograman (2024)",
+  "Membuat prototype Webcam Gesture (demo)",
+  "Poster digital untuk acara kampus"
+]
 
 export const gallery = [
-  { title: "Desain web", img: "/poster1.jpg" },
-  { title: "Sertfikat lcc", img: "/sertifikat1.jpg" },
-  { title: "Kegiatan coding", img: "/kegiatan1.jpg" }
-];
+  { title: "Desain Poster Informatika", desc: "Poster acara kampus" },
+  { title: "Sertifikat Pelatihan", desc: "Sertifikat HTML & CSS" },
+  { title: "Demo Project", desc: "Color Detector (Web demo)" }
+]
 
 export const plans = {
-  smart: "Memanfaatkan platform online seperti Dicoding, Coursera, dan YouTube untuk memperdalam ilmu pemrograman.",
-  creative: "Membuat karya digital inovatif seperti web interaktif, desain UI, dan mini-project open source.",
-  competitive: "Membangun personal branding melalui portofolio online."
-};
+  smart: "Mengikuti kursus online (Dicoding, Coursera), rutin belajar algoritma dan struktur data.",
+  creative: "Membuat proyek web interaktif dan desain portofolio berkala di Canva/Figma.",
+  competitive: "Publikasi karya di GitHub, ikut lomba hackathon dan kompetisi desain."
+}
+
+export const contacts = {
+  email: "emailkamu@example.com",
+  github: "https://github.com/username",
+  linkedin: "https://www.linkedin.com/in/username",
+  instagram: "https://instagram.com/username"
+}
