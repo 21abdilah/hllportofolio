@@ -2,7 +2,7 @@
   <section class="gallery-section">
     <div class="gallery">
       <div v-for="(img, i) in gallery" :key="i" class="gallery-item">
-        <img :src="img.jpg" :alt="img.title" />
+        <img :src="img.src" :alt="img.title" />
         <p>{{ img.title }}</p>
       </div>
     </div>
