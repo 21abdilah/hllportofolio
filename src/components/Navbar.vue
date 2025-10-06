@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar">
     <div class="container inner">
-      <div class="brand">{{ shortBrand }}</div>
+      <div class="brand">PORTOFOLIO</div>
 
       <!-- Toggle Button -->
       <button class="nav-toggle" @click="toggleMenu">
