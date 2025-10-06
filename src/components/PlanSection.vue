@@ -1,16 +1,12 @@
 <template>
-  <section class="py-12 px-6 text-center">
-    <h2 class="text-2xl font-bold text-blue-400 mb-6">Rencana Pemanfaatan Teknologi</h2>
-    <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-      <div v-for="(desc, key) in plans" :key="key"
-           class="bg-blue-800/40 border border-blue-600/30 rounded-lg p-6">
-        <h3 class="font-semibold text-lg text-blue-300 capitalize mb-2">{{ key }}</h3>
-        <p class="text-gray-300">{{ desc }}</p>
-      </div>
+  <div>
+    <div class="plan-card" v-for="(val,key) in plans" :key="key" style="margin-bottom:12px; padding:12px; border-radius:10px; border:1px solid rgba(255,255,255,0.02);">
+      <div style="font-weight:700; color:var(--primary); text-transform:capitalize">{{ key }}</div>
+      <div style="color:var(--muted); margin-top:6px">{{ val }}</div>
     </div>
-  </section>
+  </div>
 </template>
 
 <script setup>
-import { plans } from "@/data.js";
+import { plans } from '../data.js'
 </script>
