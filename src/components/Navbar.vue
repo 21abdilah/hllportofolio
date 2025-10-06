@@ -16,5 +16,5 @@
 
 <script setup>
 import { profile } from '../data.js'
-const shortBrand = profile.name.split(' ')[0] + " • INFORMATIKA"
+const shortBrand = profile.name.split(' ')[0]
 </script>
