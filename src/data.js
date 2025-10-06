@@ -5,7 +5,7 @@ export const profile = {
   tagline: "Mahasiswa baru · Pengembang Web & Desain Digital",
   about:
     "Saya mahasiswa baru Teknik Informatika angkatan 2K25.Siap, Bersemangat membangun karya nyata, kolaborasi, dan terus belajar.",
-  photo: "/profile.jpg" // replace in /public if available
+  photo: "/IMG_20250507_153537.jpg" // replace in /public if available
 }
 
 export const skills = [
