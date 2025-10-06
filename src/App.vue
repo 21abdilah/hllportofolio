@@ -1,8 +1,10 @@
 <template>
   <div>
     <Navbar />
-    <main>
+
+    <main class="pt-20"> <!-- kasih padding top supaya konten gak ketutup navbar -->
       <HeaderSection />
+
       <section id="about" class="section container">
         <AboutSection />
       </section>
@@ -42,8 +44,8 @@
         </div>
       </section>
 
-      <footer class="footer container">
-        © {{ new Date().getFullYear() }} {{ profile.name }}
+      <footer class="footer container text-gray-400 text-center py-8 border-t border-cyan-500/20">
+        © {{ new Date().getFullYear() }} {{ profile.name }} — Mahasiswa Informatika Cerdas, Kreatif, & Berdaya Saing
       </footer>
     </main>
   </div>
