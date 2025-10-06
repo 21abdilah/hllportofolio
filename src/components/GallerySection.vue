@@ -11,8 +11,8 @@
 
 <script setup>
 const gallery = [
-  { src: "/karya1.jpg", title: "Karya Desain 1" },
-  { src: "/karya2.jpg", title: "Karya Desain 2" },
+  { src: "/karya1.jpg", title: "https://webcamm-ecru.vercel.app/" },
+  { src: "/karya2.jpg", title: "https://tokodb.vercel.app/login" },
 ];
 </script>
 
