@@ -1,10 +1,16 @@
 <template>
-  <section class="max-w-3xl mx-auto py-12 px-6 text-center">
-    <h2 class="text-2xl font-bold text-blue-400 mb-4">Tentang Saya</h2>
-    <p class="text-gray-300 leading-relaxed">{{ profile.about }}</p>
+  <section class="py-12 px-6 text-center">
+    <h2 class="text-2xl font-bold text-blue-400 mb-6">Rencana Pemanfaatan Teknologi</h2>
+    <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+      <div v-for="(desc, key) in plans" :key="key"
+           class="bg-blue-800/40 border border-blue-600/30 rounded-lg p-6">
+        <h3 class="font-semibold text-lg text-blue-300 capitalize mb-2">{{ key }}</h3>
+        <p class="text-gray-300">{{ desc }}</p>
+      </div>
+    </div>
   </section>
 </template>
 
 <script setup>
-import { profile } from "@/data.js";
+import { plans } from "@/data.js";
 </script>
