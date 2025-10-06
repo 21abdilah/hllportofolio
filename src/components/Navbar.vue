@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar">
     <div class="container inner">
-      <div class="brand">{{ shortBrand }}</div>
+      <div class="brand">CV</div>
       <div class="nav-links">
         <a href="#about">Tentang</a>
         <a href="#skills">Keahlian</a>
