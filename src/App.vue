@@ -45,7 +45,7 @@
       </section>
 
       <footer class="footer container text-gray-400 text-center py-8 border-t border-cyan-500/20">
-        © {{ new Date().getFullYear() }} {{ profile.name }} — Mahasiswa Informatika Cerdas, Kreatif, & Berdaya Saing
+        © {{ new Date().getFullYear() }} {{ profile.name }}
       </footer>
     </main>
   </div>
