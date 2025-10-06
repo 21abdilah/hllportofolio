@@ -1,54 +1,26 @@
 <template>
-  <nav class="navbar fixed top-0 left-0 w-full z-50 bg-gray-900/70 backdrop-blur-md border-b border-cyan-500/20">
-    <div class="container mx-auto flex justify-between items-center px-6 py-3">
-      <!-- Brand -->
-      <div class="text-cyan-400 font-bold text-2xl tracking-widest">{{ shortBrand }}</div>
+  <nav class="navbar">
+    <div class="container inner">
+      <div class="brand">{{ shortBrand }}</div>
 
-      <!-- Toggle Button (Mobile) -->
-      <button
-        @click="toggleMenu"
-        class="md:hidden text-cyan-400 hover:text-cyan-300 focus:outline-none transition-colors"
-      >
-        <svg
-          v-if="!menuOpen"
-          xmlns="http://www.w3.org/2000/svg"
-          class="h-7 w-7"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          stroke-width="2"
-        >
-          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+      <!-- Toggle Button -->
+      <button class="nav-toggle" @click="toggleMenu">
+        <svg v-if="!menuOpen" xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none" stroke="var(--accent)" stroke-width="2">
+          <path stroke-linecap="round" d="M4 6h18M4 12h18M4 18h18" />
         </svg>
-        <svg
-          v-else
-          xmlns="http://www.w3.org/2000/svg"
-          class="h-7 w-7"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          stroke-width="2"
-        >
-          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        <svg v-else xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none" stroke="var(--accent)" stroke-width="2">
+          <path stroke-linecap="round" d="M6 6l12 12M6 18L18 6" />
         </svg>
       </button>
 
       <!-- Links -->
-      <div
-        :class="[
-          'nav-links md:flex md:items-center md:space-x-8 text-gray-300 font-medium text-lg',
-          menuOpen ? 'block absolute top-16 left-0 w-full bg-gray-900/95 md:static md:w-auto md:bg-transparent' : 'hidden md:block'
-        ]"
-      >
-        <a
-          v-for="link in links"
-          :key="link.href"
-          :href="link.href"
-          class="block md:inline-block px-6 py-3 hover:text-cyan-400 transition-colors"
-          @click="closeMenu"
-        >
-          {{ link.label }}
-        </a>
+      <div :class="['nav-links', { open: menuOpen }]">
+        <a href="#about" @click="closeMenu">Tentang</a>
+        <a href="#skills" @click="closeMenu">Keahlian</a>
+        <a href="#achievements" @click="closeMenu">Pencapaian</a>
+        <a href="#gallery" @click="closeMenu">Galeri</a>
+        <a href="#plans" @click="closeMenu">Rencana</a>
+        <a href="#contact" @click="closeMenu">Kontak</a>
       </div>
     </div>
   </nav>
@@ -60,28 +32,50 @@ import { profile } from '../data.js'
 
 const shortBrand = profile.name.split(' ')[0]
 const menuOpen = ref(false)
-
-const toggleMenu = () => {
-  menuOpen.value = !menuOpen.value
-}
-
-const closeMenu = () => {
-  menuOpen.value = false
-}
-
-const links = [
-  { href: '#about', label: 'Tentang' },
-  { href: '#skills', label: 'Keahlian' },
-  { href: '#achievements', label: 'Pencapaian' },
-  { href: '#gallery', label: 'Galeri' },
-  { href: '#plans', label: 'Rencana' },
-  { href: '#contact', label: 'Kontak' }
-]
+const toggleMenu = () => (menuOpen.value = !menuOpen.value)
+const closeMenu = () => (menuOpen.value = false)
 </script>
 
 <style scoped>
-.navbar {
-  font-family: 'Orbitron', sans-serif;
-  letter-spacing: 0.05em;
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    padding: 18px 0;
+    background: rgba(2, 6, 23, 0.95);
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
+    animation: fadeSlide 0.3s ease;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  @keyframes fadeSlide {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 }
 </style>
