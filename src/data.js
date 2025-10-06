@@ -18,7 +18,7 @@ export const skills = [
 ]
 
 export const achievements = [
-  "Lulus dari SMKN 4 TASIKMALAYA  (2024)",
+  "Lulus dari SMKN 4 TASIKMALAYA  (2024/2025)",
   "Membuat Webcam Gesture Dan ERP",
   
 ]
