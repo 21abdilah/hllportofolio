@@ -1,22 +1,62 @@
 <template>
-  <main class="min-h-screen text-gray-100">
-    <HeaderSection />
-    <AboutSection />
-    <SkillsSection />
-    <AchievementsSection />
-    <GallerySection />
-    <PlanSection />
-    <footer class="text-center py-6 text-sm text-gray-400 border-t border-gray-700 mt-8">
-      © 2025 Hilal Abdilah · Portofolio
-    </footer>
-  </main>
+  <div>
+    <Navbar />
+    <main>
+      <HeaderSection />
+      <section id="about" class="section container">
+        <AboutSection />
+      </section>
+
+      <section id="skills" class="section container">
+        <h2>Keahlian & Minat</h2>
+        <div class="panel grid-3">
+          <SkillsSection />
+        </div>
+      </section>
+
+      <section id="achievements" class="section container">
+        <h2>Pencapaian</h2>
+        <div class="panel">
+          <AchievementsSection />
+        </div>
+      </section>
+
+      <section id="gallery" class="section container">
+        <h2>Dokumentasi Visual</h2>
+        <div class="panel grid-3">
+          <GallerySection />
+        </div>
+      </section>
+
+      <section id="plans" class="section container">
+        <h2>Rencana Pemanfaatan Teknologi</h2>
+        <div class="panel grid-3">
+          <PlanSection />
+        </div>
+      </section>
+
+      <section id="contact" class="section container">
+        <h2>Kontak & Link</h2>
+        <div class="panel">
+          <ContactSection />
+        </div>
+      </section>
+
+      <footer class="footer container">
+        © {{ new Date().getFullYear() }} {{ profile.name }} — Mahasiswa Teknik Informatika
+      </footer>
+    </main>
+  </div>
 </template>
 
 <script setup>
-import HeaderSection from "@/components/HeaderSection.vue";
-import AboutSection from "@/components/AboutSection.vue";
-import SkillsSection from "@/components/SkillsSection.vue";
-import AchievementsSection from "@/components/AchievementsSection.vue";
-import GallerySection from "@/components/GallerySection.vue";
-import PlanSection from "@/components/PlanSection.vue";
+import Navbar from './components/Navbar.vue'
+import HeaderSection from './components/HeaderSection.vue'
+import AboutSection from './components/AboutSection.vue'
+import SkillsSection from './components/SkillsSection.vue'
+import AchievementsSection from './components/AchievementsSection.vue'
+import GallerySection from './components/GallerySection.vue'
+import PlanSection from './components/PlanSection.vue'
+import ContactSection from './components/ContactSection.vue'
+import { profile } from './data.js'
 </script>
