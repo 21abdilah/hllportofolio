@@ -1,9 +1,8 @@
 <template>
   <section class="gallery-section">
-    <h2>📸 Dokumentasi Visual</h2>
     <div class="gallery">
       <div v-for="(img, i) in gallery" :key="i" class="gallery-item">
-        <img :src="img.src" :alt="img.title" />
+        <img :src="img.jpg" :alt="img.title" />
         <p>{{ img.title }}</p>
       </div>
     </div>
