@@ -39,5 +39,5 @@ export const contacts = {
   email: "hllbdlh@gmail.com",
   github: "https://github.com/21abdilah",
   linkedin: "https://www.linkedin.com/in/belum",
-  instagram: "https://instagram.com/hahihihi"
+  instagram: "https://instagram.com/hahihihihihihih"
 }
