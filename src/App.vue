@@ -43,7 +43,7 @@
       </section>
 
       <footer class="footer container">
-        © {{ new Date().getFullYear() }} {{ profile.name }} — Mahasiswa Teknik Informatika
+        © {{ new Date().getFullYear() }} {{ profile.name }}
       </footer>
     </main>
   </div>
