@@ -12,7 +12,7 @@ export const skills = [
   "Node.js",
   "Vue 3 (Vite)",
   "Botstrap",
-  "Desain Grafis (Canva, Figma)",
+  "Desain Grafis(Canva, Figma)",
   "Editing Video (Capcut)",
   "MLBB"
 ]
